@@ -19,7 +19,7 @@ class Driver {
   }
 
   passengers() {
-    return this.trips.map(
+    return this.trips().map(
       function(t) {
         let passenger = store.passengers.find(t.passengerId)
         return passenger
