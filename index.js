@@ -51,7 +51,7 @@ class Passenger {
       function(t) {
         return store.drivers.find(
           function(d) {
-            return d.id === t.passengerId
+            return d.id === t.driverId
           }
         )
       }
