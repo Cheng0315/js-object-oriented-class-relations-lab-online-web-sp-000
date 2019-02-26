@@ -28,6 +28,6 @@ class Trip {
   }
 
   driverId() {
-    return this.driverId
+    return this.id
   }
 }
