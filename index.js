@@ -37,6 +37,26 @@ class Passenger {
     this.name = name;
     store.passengers.push(this)
   }
+
+  trips() {
+    return store.trips.filter(
+      function(t) {
+        return t.passengerId === this.id
+      }.bind(this)
+    )
+  }
+
+  drivers() {
+    return this.trips().map(
+      function(t) {
+        return store.drivers.find(
+          function(d) {
+            return d.id === t.passengerId
+          }
+        )
+      }
+    )
+  }
 }
 
 class Trip {
