@@ -17,6 +17,15 @@ class Driver {
       }.bind(this)
     )
   }
+
+  passengers() {
+    return this.trips.map(
+      function(t) {
+        let passenger = store.passengers.find(t.passengerId)
+        return passenger
+      }
+    )
+  }
 }
 
 class Passenger {
