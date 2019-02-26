@@ -28,7 +28,6 @@ class Trip {
   }
 
   driverId() {
-    let trip = store.trips.find(this.id)
-    return trip.driverId;
+    return this.driverId
   }
 }
