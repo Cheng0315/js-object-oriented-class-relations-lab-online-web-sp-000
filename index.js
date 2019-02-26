@@ -21,7 +21,11 @@ class Driver {
   passengers() {
     return this.trips().map(
       function(t) {
-        return store.passengers.find(t.passengerId)
+        return store.passengers.find(
+          function(p) {
+            return p.id === t.passengerId
+          }
+        )
       }
     )
   }
