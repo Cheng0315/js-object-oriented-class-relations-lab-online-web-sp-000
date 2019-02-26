@@ -26,4 +26,12 @@ class Trip {
     this.passengerId = passenger.id;
     store.trips.push(this)
   }
+
+  passenger() {
+    store.passengers.find(
+      function(p) {
+        p.id === this.passengerId
+      }
+    )
+  }.bind(this)
 }
